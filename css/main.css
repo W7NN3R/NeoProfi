@@ -1,0 +1,470 @@
+/* Основное*/
+*{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+/* Работа с nav. Адаптивное меню для компьютеров - desk. Для телефонов - mobile */
+nav.desk ul,
+section, .links {
+	margin: 0 auto;
+	max-width: 1250px;
+}
+header nav.desk,
+header nav.mobile{
+    z-index: 1;
+	width: 100%;
+	background-color: #222;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+}
+nav.desk ul{
+	padding-top: 12px;
+	list-style: none;
+	height: 25px;
+
+}
+
+nav.desk ul li{
+	width: 7%;
+	float: left;
+	text-align: center;	
+	line-height: 60%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+nav.desk ul li.nav-account{
+	width: 13%;
+}
+nav.desk ul li.last-li{
+	width: 11%;
+	text-align: center;
+	float: right;
+}
+nav.desk a,
+nav.mobile a{
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+	color: white;
+}
+nav a:hover{
+	color: #B89CA4;
+}
+nav.mobile,
+.hamburger-btn{
+	display: none;
+}
+
+
+
+
+
+
+
+
+/* Работа с section */
+
+.main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+.main_item{
+	padding: 10px;
+  margin-right: 5px
+}
+/* Работа с article */
+
+
+article{
+	padding-top: 20px;
+}
+article .search{
+	height: 100px;
+	width: 60%;
+	display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+article form input{
+	border-radius: 4px;
+	width: 90%;
+	height: 50%;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+input:focus::-moz-placeholder {
+  color: transparent
+}
+
+input:focus:-moz-placeholder {
+  color: transparent
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent
+}
+
+.t_number{
+	display: flex;
+    justify-content: center;
+	width: 20%;
+	height: 100px;
+	text-align: center;
+}
+.t_number p{
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
+	padding-top: 15px;
+	color: #444;
+}
+.t_number big{
+	font-size: 25px;
+}
+.t_nubmer small{
+	font-size: 10px;
+}
+
+
+/* Работа с nav desk_fixed */
+.desk_fixed{
+
+}
+nav.desk_fixed ul,
+ul.slider-ul{
+    margin: 0 auto;
+	padding-top: 12px;
+	list-style: none;
+	height: 30px;
+}
+nav.desk_fixed ul li{
+	width: 12.5%;
+	float: left;
+	text-align: center;	
+	line-height: 60%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+nav.desk_fixed ul li a{
+    color: #333;
+    text-decoration: none;
+    font-family: "Raleway-Bold";
+}
+nav.desk_fixed ul li a:hover{
+    color: #000;
+}
+
+
+.logo{
+	background: #000;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.graficlogo{
+	padding: 5px;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+
+
+/* Работа с @media , особенно с мобильной версией nav */
+@media screen and (max-width: 900px){
+  nav.desk {
+    display: none;
+  }
+    nav.desk_fixed {
+        display: none;
+    }
+    div.t_number {
+        display: none;
+    }
+
+  nav.mobile,
+  .hamburger-btn {
+  	position: fixed;
+	top: 0;
+	left: 0;
+    display: block;
+  }
+  
+  .hamburger-btn {
+  	background-color: #000;
+    position: relative;
+  }
+
+  .hamburger-btn .fa-bars,
+  .hamburger-btn .fa-times {
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+	.hamburger-btn a{
+		position: fixed;
+	}
+	.first {
+		right: 46%;
+	}
+	
+	.last {
+	right: 2%;
+	}
+
+  .mobile ul{
+    background: #222;
+    display: none;
+  }
+
+  .mobile li {
+  	border-bottom: 1px solid #555; 
+    text-align: left;
+    padding: 21px;
+    cursor: pointer;
+  }
+  
+	.mobile li a {
+	  border-bottom: 1px solid #fff;
+	}
+
+  .mobile ul.active {
+    display: block;
+      
+  }
+
+}
+
+.slidershow-container {
+    width: 100%;
+}
+
+.slider-view {
+
+}
+
+.slider-ul {
+    width: 100%;
+    
+}
+
+section ul.slider-ul li {
+  font-family: 'New Times Roman',sans-serif;
+  height: 45px;
+  font-size:100%;
+  color: #666;
+  width: 16.667%;
+	float: left;
+  justify-content: center;
+  align-items: center; 
+	text-align: center;	
+	line-height: 60%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+ul.slider-ul li:hover{
+    color: #111;
+}
+ul.slider-ul li p {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 80%;
+    line-height: 1.1em;
+}
+
+.slidesrhow-container img {
+    z-index: 0;
+    width: 100%;
+}
+.shop img{
+    width: 90%;
+}
+
+.slideshow-container {
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .01} 
+  to {opacity: 1}
+}
+
+.active-slide {
+    color: #fff;
+    background-color: #D40D80;
+}
+.active-slide p {
+    color: #fff;
+}
+
+.shop,
+.main-discount {
+    width: 100%;  
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.shop-item {
+    width: 20%;
+    padding: 10px;  
+    margin: 0 auto; 
+    text-align: center;
+    
+}
+
+.shop-item:hover{
+    outline: 4px solid #D40D80;
+}
+
+.shop-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.discount-nav {
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #D40D80;
+}
+
+.discount-nav li {
+    color: #fff;
+	width: 22%;
+	float: left;
+	text-align: center;	
+	line-height: 250%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.discount-nav li:hover {
+    background-color: #222;
+}
+
+.discount-nav div{
+    color: #fff;
+    margin-right: 20px;
+    position: absolute;
+    right: 0%;
+    top: 12px;
+}
+
+.main-discount {
+    height: 350px;
+    
+}
+
+.discount-item {
+    width: 20%;  
+    margin: 0 auto; 
+    text-align: left;
+}
+.discount-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 80%;
+    font-family: sans-serif;
+}
+.discount-item p {
+    height: 45px;
+}
+.discount-item img {
+    height: 200px;
+    width: 100%;
+}
+.price {
+    color: #000;
+    font-size: 120%;
+    font-family: ;
+}
+.price del {
+    color: #666;
+}
+
+footer { 
+  background-color: #222;
+  height: 250px;
+}
+.links {
+  display: flex;    
+  height: 200px;
+}
+.links big{
+  margin-top: 20px;
+  font-size: 120%;
+  color: #fff;
+}
+.links div:nth-child(3) {
+  width: 500px;
+}
+.links div a {
+  color: #d40d80;
+}
+.links div p {
+  color: #999;
+  padding-bottom: 17px;
+}
+.links div {  
+  padding-top: 22px;
+  width: 230px;
+  max-width: 1250px;
+}
+.links div ul li{
+  padding-top: 7px;
+  list-style-type: none;
+}
+.links div ul li a{
+  border-bottom: 1px solid #666;
+  color: #999;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.links div:last-child p:first-child {
+  font-size: 200%;
+  color: #fff;
+}
+
+.links a img {
+  padding-right: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+#order-call p {
+  padding-top: 13px;
+  width: 180px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 100%;
+}
